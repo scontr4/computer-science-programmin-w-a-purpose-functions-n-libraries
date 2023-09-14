@@ -8,7 +8,7 @@ class uniformRandomNumbers {
 
     public static void main(String[] args) {
 
-        double a = Math.random();
+        double a = Math.random();        
         double b = Math.random();
         double c = Math.random();
         double d = Math.random();
@@ -18,6 +18,7 @@ class uniformRandomNumbers {
         double min = Math.min(Math.min(Math.min(Math.min(a, b), c), d), e);
         double max = Math.max(Math.max(Math.max(Math.max(a, b), c), d), e);
 
+        System.out.println("The Numbers are:  " + a + ' ' + b + ' ' + c + ' ' + d + ' ' + e);
         System.out.println("The average of the five random numbers is: " + average);
         System.out.println("The minimum of the five random numbers is: " + min);
         System.out.println("The maximum of the five random numbers is: " + max);
