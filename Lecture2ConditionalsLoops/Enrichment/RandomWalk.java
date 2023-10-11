@@ -5,8 +5,9 @@ public class RandomWalk {
         
         // I will compute the average of the steps as totaSteps / numberOfTrials
         int steps = 0;
+        int numberOfTrials = 1000;
         
-        for(int trials=1; trials <= 1000; trials++) {
+        for(int trials=1; trials <= numberOfTrials; trials++) {
             boolean inBoundary = false;
             int yCoord = n;
             int xCoord = n;
@@ -17,13 +18,13 @@ public class RandomWalk {
                 if (probability < 0.25) {
                     xCoord--;
                 } 
-                if (0.25 < probability && probability < 0.5) {
+                else if (probability < 0.5) {
                     xCoord++;
                 }
-                if (0.5 < probability && probability < 0.75) {
+                else if (probability < 0.75) {
                     yCoord--;
                 }
-                if (0.75 < probability) {
+                else {
                     yCoord++;
                 }
 
@@ -35,7 +36,7 @@ public class RandomWalk {
             }
         
         }
-        int averageSteps = steps/1000;
+        int averageSteps = steps/numberOfTrials;
 
         System.out.println("Average steps per trial: " + averageSteps);
 
