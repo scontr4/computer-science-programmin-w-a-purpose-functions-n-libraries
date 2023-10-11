@@ -4,8 +4,6 @@ public class Kary {
         int i = Integer.parseInt(args[0]);
         int k = Integer.parseInt(args[1]);
 
-        char number;
-
         if (k < 2 || k > 16) {
             System.out.println("Base (second argument) must be between 2 and 16");
             return;
