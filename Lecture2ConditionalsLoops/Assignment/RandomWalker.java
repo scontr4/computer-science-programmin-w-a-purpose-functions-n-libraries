@@ -11,30 +11,31 @@ public class RandomWalker {
 
         int steps = 0;
 
-
         boolean reachedManhattanDistance = false;
+        
+        if (r > 0) {
+            while (reachedManhattanDistance == false) {
+                double probability = Math.random();
 
-        while (reachedManhattanDistance == false) {
-            double probability = Math.random();
+                    if (probability < 0.25) {
+                        xCoord--;
+                    } 
+                    else if (probability < 0.5) {
+                        xCoord++;
+                    }
+                    else if (probability < 0.75) {
+                        yCoord--;
+                    }
+                    else {
+                        yCoord++;
+                    }
+                    
+                    steps ++;
+                    System.out.println("(" + xCoord + ", " + yCoord + ")");
 
-                if (probability < 0.25) {
-                    xCoord--;
-                } 
-                else if (probability < 0.5) {
-                    xCoord++;
-                }
-                else if (probability < 0.75) {
-                    yCoord--;
-                }
-                else {
-                    yCoord++;
-                }
-                
-                steps ++;
-                System.out.println("(" + xCoord + ", " + yCoord + ")");
-
-                int manhattanDistance = Math.abs(xCoord) + Math.abs(yCoord);
-                if (manhattanDistance == r) reachedManhattanDistance = true;
+                    int manhattanDistance = Math.abs(xCoord) + Math.abs(yCoord);
+                    if (manhattanDistance == r) reachedManhattanDistance = true;
+            }
         }
 
         System.out.println("steps = " + steps);
