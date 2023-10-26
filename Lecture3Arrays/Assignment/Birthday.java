@@ -8,7 +8,9 @@ public class Birthday {
 
         // For this list, each position i has the times i people entered
         // until two birthdays matched
-        int[] timesList = new int[1000];
+        int hugeListLength = 1000;
+
+        int[] timesList = new int[hugeListLength];
 
         for (int trial = 0; trial < trials; trial++) {            
             
@@ -30,8 +32,17 @@ public class Birthday {
             timesList[count]++;
         }
 
-        for (int i=0; i < 30; i++) {
-            System.out.println( i + " times: " + timesList[i]);
+        // Print the table, initializing it on the first person
+        int times = 1;        
+        int cumTimesCounter = 0;
+        double cumPercentage = 0;        
+        while (cumPercentage < 0.5) {
+            cumTimesCounter += timesList[times];
+            cumPercentage = ((double) cumTimesCounter) / trials;
+
+            System.out.println( times + "   " + cumTimesCounter + "   " + cumPercentage);
+
+            times++;
         }
 
     }
