@@ -6,6 +6,10 @@ public class Birthday {
         int n = Integer.parseInt(args[0]);
         int trials = Integer.parseInt(args[1]);
 
+        // For this list, each position i has the times i people entered
+        // until two birthdays matched
+        int[] timesList = new int[1000];
+
         for (int trial = 0; trial < trials; trial++) {            
             
             int count = 1;
@@ -23,9 +27,11 @@ public class Birthday {
 
                 count++;
             }
+            timesList[count]++;
+        }
 
-            System.out.println(count);
-
+        for (int i=0; i < 30; i++) {
+            System.out.println( i + " times: " + timesList[i]);
         }
 
     }
