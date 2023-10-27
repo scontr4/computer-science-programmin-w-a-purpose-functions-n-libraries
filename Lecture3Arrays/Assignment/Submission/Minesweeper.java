@@ -31,7 +31,7 @@ public class Minesweeper {
 
         // Print the grid
         for (int i=1; i < m+1; i++){
-            for (int j=1; j < n+1; j++){
+            for (int j=1; j < m+1; j++){
                 if (grid[i][j] == -1) {
                     System.out.print('*' + "  ");
                 } 
