@@ -7,7 +7,6 @@ public class ThueMorse {
         
         // Build the Thue-Morse sequence
         int[] thueMorseSequence = new int[n];
-        System.out.print(thueMorseSequence[0] + " ");
         for (int i=1; i < n; i++) {
 
             int exponent = (int) (Math.log(i) / Math.log(2));
@@ -19,9 +18,7 @@ public class ThueMorse {
             else {
                 thueMorseSequence[i] = 0;
             }
-            System.out.print(thueMorseSequence[i] + " ");
         }
-        System.out.println();
 
         // Create the Thue-Morse wave
         for (int i = 0; i < n; i++) {    

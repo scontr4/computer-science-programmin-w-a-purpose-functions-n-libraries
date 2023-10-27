@@ -40,7 +40,7 @@ public class Birthday {
             cumTimesCounter += timesList[times];
             cumPercentage = ((double) cumTimesCounter) / trials;
 
-            System.out.println( times + "   " + cumTimesCounter + "   " + cumPercentage);
+            System.out.println( times + "   " + timesList[times] + "   " + cumPercentage);
 
             times++;
         }
