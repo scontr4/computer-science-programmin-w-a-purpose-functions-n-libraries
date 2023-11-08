@@ -6,17 +6,12 @@ public class PlotFilter {
         double ymax = StdIn.readDouble();
 
         StdDraw.setXscale(xmin, xmax);
-        StdDraw.setXscale(ymin, ymax);
-
-        StdDraw.setPenRadius(0.01);
-
+        StdDraw.setYscale(ymin, ymax);
         while (!StdIn.isEmpty())
         {
             double x = StdIn.readDouble();
             double y = StdIn.readDouble();
-
-            StdDraw.point(x, y);
-
+            StdDraw.point(x, y); 
         }
-    }
+    }   
 }
