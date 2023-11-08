@@ -11,8 +11,8 @@ public class Chaos {
 
         for (int t=0; t < trials; t++) {
             int r = (int) (Math.random() * 3);
-            x = x + cx[r] / 2.0;
-            y = y + cy[r] / 2.0;
+            x = (x + cx[r]) / 2.0;
+            y = (y + cy[r]) / 2.0;
             StdDraw.point(x, y);
         }
     }
